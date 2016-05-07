@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Duke</title>
+  <title>Tag: Android,Java,xmg | Duke</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一只在Android路上前行的小白白">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Duke">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/Android-Java-xmg/index.html">
 <meta property="og:site_name" content="Duke">
 <meta property="og:description" content="一只在Android路上前行的小白白">
 <meta name="twitter:card" content="summary">
@@ -30,13 +30,8 @@
   
   <link rel="stylesheet" href="/css/style.css">
   
-      <style> .article { opacity: 0;} </style>
-  
   <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  
-    
-    
   
   
       <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
@@ -47,10 +42,10 @@
       var yiliaConfig = {
           fancybox: true,
           animate: true,
-          isHome: true,
+          isHome: false,
           isPost: false,
           isArchive: false,
-          isTag: false,
+          isTag: true,
           isCategory: false,
           open_in_new: false,
           fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -239,229 +234,52 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-Android Day01" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2016/05/07/Android Day01/" class="article-date">
-      <time datetime="2016-05-07T06:10:16.882Z" itemprop="datePublished">2016-05-07</time>
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a href="/2016/05/07/Android Day01/" class="archive-article-date">
+      <time datetime="2016-05-07T06:10:16.882Z" itemprop="datePublished">05-07</time>
 </a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
+        </div>
+         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/07/Android Day01/">Android Day01</a>
+      <a class="archive-article-title" href="/2016/05/07/Android Day01/">Android Day01</a>
     </h1>
   
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="article-info info-on-archive">
           
-        <hr>
-<h1 id="Android的系统体系结构"><a href="#Android的系统体系结构" class="headerlink" title="Android的系统体系结构"></a>Android的系统体系结构</h1><ol>
-<li>Linux Kernel:主要封装了各种驱动代码，通过驱动调用来实现对各种硬件操作</li>
-<li><p>Libraries:封装驱动层代码 为Android框架层提供服务</p>
-</li>
-<li><p>Application Framework:封装C/C++代码 向(java程序员)应用程序提供服务 </p>
-</li>
-<li><p>Application:应用层 java程序员经常写代码的地方</p>
-</li>
-</ol>
-<p><img src="./images/AndroidSystem.png" alt="Android系统的体系结构" title="AndroidSystem.png"></p>
-<p>  补充: </p>
-<ul>
-<li>Android HAL:  Android的硬件抽象层，把对硬件的支持分成了两层，用户空间和内核空间，其中，硬件抽象层运行在用户空间，而Linux内核驱动程序运行在内核空间。</li>
-<li>Adnroid Runtime:  安卓运行时<ul>
-<li>core libraries:Android 核心函数库所提供的功能，大部分与Oracle的Java 核心函数库相同</li>
-<li>Dalvik Virtual Machine:    Dalvik 虚拟机 简称为dvm 主要运行压缩后的代码 .dex</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h1 id="SDK文件目录解析"><a href="#SDK文件目录解析" class="headerlink" title="SDK文件目录解析"></a>SDK文件目录解析</h1><p>  主要用来存储安卓开发的环境</p>
-<ol>
-<li>.android:虚拟机创建的文件</li>
-<li>add-ons 存储google的一些API  平时很少 基本没使用  存储google地图 google paly 代码</li>
-<li>build-tools 编译工具</li>
-<li>docs 安卓文档  目前使用的是 <a href="http://wear.techbrood.com/guide/index.html" target="_blank" rel="external">安卓文档</a>  国内镜像</li>
-<li>extras  兼容低版本开发</li>
-<li>platforms 主要存储不同的安卓版本 如android-19对应的是 android4.4 </li>
-<li>platform-tools tools  都是安卓开发的时候所需要的小工具  作为环境变量</li>
-<li>sources  安卓(java层)应用层的源代码</li>
-<li>system-images   jni开发中比较重要  存储不同的安卓处理器平台   arm (安卓1.5版本就开始)   x86  MIPS 3.0以后出现</li>
-</ol>
-<hr>
-<h1 id="ADT"><a href="#ADT" class="headerlink" title="ADT"></a>ADT</h1><h1 id="DDMS-Dalvik-Debug-Monitor-Service"><a href="#DDMS-Dalvik-Debug-Monitor-Service" class="headerlink" title="DDMS:Dalvik Debug Monitor Service"></a>DDMS:Dalvik Debug Monitor Service</h1><p>   Dalvik虚拟机调试监控服务</p>
-<ol>
-<li>Device(设备) <ol>
-<li>Devices(设备)<br>-设备名称<br>-应用对应的包名（进程号）<br>关闭某个应用进程：Devices–&gt;选择某一进程–&gt;Stop<br>绿色爬虫（调试按钮）</li>
-</ol>
-</li>
-<li>File Explorer(文件管理)  <ul>
-<li>linux文件系统 判断标准：有没有盘符<blockquote>
-<p>Permissions    显示文件、文件夹的读 写 执行权限<br>com.android.xxx为某个应用的安装文件夹<br>-data/data/com.android.xxx/databases    包含了数据库文件    数据库事件文件<br>-data/data/com.android.xxx/shared_prefs    包含了   sharedPreference存储文件<br>文件的导入导出</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li>Emulator Control(模拟器管理)<br>  -Speed    设置通讯技术如2.5G 3G 4G<br> -Telephony Actions    模拟打电话    发短信<br> -Longitude    经度<br>  -Latitude     纬度</li>
-<li>LogCat(日志)</li>
-</ol>
-<h1 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h1><ol>
-<li><p>创建工程<br> Application Name: 应用名称<br> Project Name:  Eclipse项目名称<br> Package Name:包名，一般格式为公司域名的倒叙+项目名，如com.m520ot.appname<br> Minimum Required SDK: 应用所需的最低版本<br> Targer SDK:  针对开发的版本<br> Compile With: 编译版本 一般目标版本和编译版本都是目前市场上最流行的版本<br> Theme:  主题 整个应用的样式</p>
-</li>
-<li><p>编写应用程序的ui界面，res–&gt;layout–&gt;activity_main.xml</p>
-</li>
-<li>写java代码，在src目录下。MainActivity–&gt;setContentView(resId);</li>
-<li>选中项目 右键 运行项目</li>
-</ol>
-<p>导入项目：<br>右键Import–&gt;General–&gt;Existing Projects into Workspace…</p>
-<h2 id="Android项目结构："><a href="#Android项目结构：" class="headerlink" title="Android项目结构："></a>Android项目结构：</h2><ol>
-<li>src     我们编写的java代码。</li>
-<li>gen    R.java文件自动生成资源文件对应的代码id,永远不要手动修改它<br>Android4.4<br>Android Private Libraries   安卓导入的依赖包</li>
-<li>assets    资产目录 打包一些文件到应用程序里面（数据库文件，网页文件，配置文件）</li>
-<li>bin    将java代码和资源编译打包成.apk文件</li>
-<li>libs    安卓开发所需要存放的第三方开发包</li>
-<li><p>res    资源目录</p>
-<ul>
-<li>drawable      图标 图片</li>
-<li>layout            布局文件</li>
-<li>menu             菜单配置文件</li>
-<li>values    字符串</li>
-<li>dimens     安卓的控件尺寸</li>
-<li>strings     存储所有文本</li>
-<li>styles     样式文件</li>
-<li>colors     颜色文件</li>
-<li>ids      存储安卓控件的id的文件</li>
-</ul>
-</li>
-<li><p>AndroidManifest.xml    安卓配置文件 相当于javaweb的</p>
-</li>
-<li>properties文件<br>project.propertise        工程的配置文件 配置安卓版本 第三方依赖包的路径<br>proguard-project.txt  配置混淆编译的规则</li>
-</ol>
-<h2 id="应用程序编译安装过程："><a href="#应用程序编译安装过程：" class="headerlink" title="应用程序编译安装过程："></a>应用程序编译安装过程：</h2><ol>
-<li>把所有的.java文件编译成.class文件<br>jdk的javac.exe</li>
-<li>把所有的.class字节码文件打包合成一个文件classes.dex<br>\sdk\build-tools\android-4.4目录下的dx.bat</li>
-<li>根据资源id,生成一个resources.ap_ 保存所有的资源信息</li>
-<li>把.dex文件，res目录下的资源文件，resources.ap_文件    asset目录下的文件合成一起打包成一个apk压缩包<br> 使用\sdk\build-tools\android-4.4\aapt.exe</li>
-<li>adb.exe 负责把生成好的apk文件上传安装到手机里面。<br>Android debug bridge 安卓调试桥 负责上传安装apk</li>
-</ol>
-<h2 id="adb命令"><a href="#adb命令" class="headerlink" title="adb命令"></a>adb命令</h2><ol>
-<li><p>安装一个应用程序<br>adb install xxx.apk</p>
-</li>
-<li><p>卸载一个应用程序<br>adb uninstall com.xx.xx.xx</p>
-</li>
-<li><p>进入到手机终端（安卓手机是linux系统，此后就可以开始执行linux终端命令）<br>adb shell </p>
-</li>
-<li><p>杀死adb的调试桥(当调试桥不稳定的时候)<br>adb kill-server<br>启动adb的调试桥<br>adb start-server</p>
-</li>
-<li><p>查看连接到电脑上的设备<br>adb devices</p>
-</li>
-<li><p>指定设备执行的adb指令<br>adb -s  emulator-5556 install xxx.apk</p>
-</li>
-</ol>
 
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
+          
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android-Java-xmg/">Android,Java,xmg</a></li></ul>
     </div>
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
-  
 </article>
-
-
-
-
-
-
-
-
-
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2016/04/20/hello-world/" class="article-date">
-      <time datetime="2016-04-20T14:58:33.778Z" itemprop="datePublished">2016-04-20</time>
-</a>
-    </div>
+    </div></section>
   
-  <div class="article-inner">
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/20/hello-world/">Hello World</a>
-    </h1>
-  
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
     <div class="outer">
